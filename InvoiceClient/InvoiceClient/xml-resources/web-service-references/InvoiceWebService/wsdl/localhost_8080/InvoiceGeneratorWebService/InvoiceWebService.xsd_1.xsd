@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://invoicewebservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://invoicewebservice/">
+
+<xs:element name="CESS" type="tns:CESS"/>
+
+<xs:element name="CESSResponse" type="tns:CESSResponse"/>
+
+<xs:element name="CGST" type="tns:CGST"/>
+
+<xs:element name="CGSTResponse" type="tns:CGSTResponse"/>
+
+<xs:element name="SGST" type="tns:SGST"/>
+
+<xs:element name="SGSTResponse" type="tns:SGSTResponse"/>
+
+<xs:element name="TotalCost" type="tns:TotalCost"/>
+
+<xs:element name="TotalCostResponse" type="tns:TotalCostResponse"/>
+
+<xs:element name="subTotal" type="tns:subTotal"/>
+
+<xs:element name="subTotalResponse" type="tns:subTotalResponse"/>
+
+<xs:complexType name="SGST">
+<xs:sequence>
+<xs:element name="sgstpercentage" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SGSTResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CGST">
+<xs:sequence>
+<xs:element name="cgstpercentage" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CGSTResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subTotal">
+<xs:sequence>
+<xs:element name="Quantity" type="xs:double"/>
+<xs:element name="UnitCost" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subTotalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TotalCost">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="TotalCostResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CESS">
+<xs:sequence>
+<xs:element name="cgstpercentage" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CESSResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
